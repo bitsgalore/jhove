@@ -33,6 +33,11 @@
         <system>GitHub Issues</system>
     </issueManagement>
 
+    <ciManagement>
+        <system>OPF Jenkins</system>
+        <url>http://jenkins.opf-labs.org</url>
+    </ciManagement>
+
     <licenses>
         <license>
             <name>GNU Lesser General Public License, version 2.1 (LGPL-2.1)</name>
