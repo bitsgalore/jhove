@@ -51,6 +51,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mvn.compiler.version>3.0</mvn.compiler.version>
+        <mvn.jar.version>2.4</mvn.jar.version>
+        <mvn.javadoc.version>2.9.1</mvn.javadoc.version>
         <java.source.version>1.5</java.source.version>
         <java.target.version>1.5</java.target.version>
     </properties>
@@ -69,7 +71,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <version>${mvn.jar.version}</version>
                 <executions>
                     <execution>
                         <!-- console app - don't change id, will cause build 
@@ -108,7 +110,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>${mvn.javadoc.version}</version>
             </plugin>
         </plugins>
         <pluginManagement>
