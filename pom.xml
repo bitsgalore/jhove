@@ -28,6 +28,11 @@
         <developerConnection>scm:git:git@github.com:openpreserve/jhove.git</developerConnection>
     </scm>
 
+    <issueManagement>
+        <url>https://github.com/openpreserve/jhove/issues/</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
     <licenses>
         <license>
             <name>GNU Lesser General Public License, version 2.1 (LGPL-2.1)</name>
