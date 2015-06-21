@@ -12,7 +12,14 @@
     <version>1.12.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>jhove</name>
+    <name>JHOVE</name>
+    <description>Extensible software framework for performing format identification, validation, and characterization of digital objects.</description>
+
+    <organization>
+        <name>Open Preservation Foundation</name>
+        <url>http://openpreservation.org</url>
+    </organization>
+    <url>https://github.com/openpreserve/jhove/</url>
 
     <!-- To build the command line and GUI jars: mvn clean install To generate 
         Javadoc: mvn javadoc:javadoc -->
