@@ -12,14 +12,23 @@
     <version>1.12.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>JHOVE</name>
-    <description>Extensible software framework for performing format identification, validation, and characterization of digital objects.</description>
+    <name>JHOVE JSTOR/Harvard Object Validation Environment</name>
+    <description>Extensible software framework for performing format identification, validation, and characterisation of digital objects.</description>
+    <inceptionYear>2008</inceptionYear>
 
     <organization>
         <name>Open Preservation Foundation</name>
         <url>http://openpreservation.org</url>
     </organization>
     <url>https://github.com/openpreserve/jhove/</url>
+
+    <licenses>
+        <license>
+            <name>GNU Lesser General Public License, version 2.1 (LGPL-2.1)</name>
+            <url>http://opensource.org/licenses/LGPL-2.1</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <!-- To build the command line and GUI jars: mvn clean install To generate 
         Javadoc: mvn javadoc:javadoc -->
