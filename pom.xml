@@ -22,6 +22,12 @@
     </organization>
     <url>http://jhove.openpreservation.org</url>
 
+    <scm>
+        <url>https://github.com/openpreserve/jhove/</url>
+        <connection>scm:git:https://github.com/openpreserve/jhove.git</connection>
+        <developerConnection>scm:git:git@github.com:openpreserve/jhove.git</developerConnection>
+    </scm>
+
     <licenses>
         <license>
             <name>GNU Lesser General Public License, version 2.1 (LGPL-2.1)</name>
