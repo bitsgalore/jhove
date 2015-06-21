@@ -12,8 +12,12 @@
     <version>1.12.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>JHOVE JSTOR/Harvard Object Validation Environment</name>
-    <description>Extensible software framework for performing format identification, validation, and characterisation of digital objects.</description>
+    <name>JHOVE</name>
+    <description>
+        JSTOR/Harvard Object Validation Environment.
+        Extensible software framework for performing format identification,
+        validation, and characterisation of digital objects.
+    </description>
     <inceptionYear>2008</inceptionYear>
 
     <organization>
@@ -85,7 +89,9 @@
                             <classifier>cmd</classifier>
                             <archive>
                                 <manifest>
+                                    <addClasspath>true</addClasspath>
                                     <mainClass>Jhove</mainClass>
+                                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -100,7 +106,9 @@
                             <classifier>gui</classifier>
                             <archive>
                                 <manifest>
+                                    <addClasspath>true</addClasspath>
                                     <mainClass>JhoveView</mainClass>
+                                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                                 </manifest>
                             </archive>
                         </configuration>
