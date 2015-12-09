@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Main page for JHOVE, the JSTOR/Harvard Object Validation Environment">
+    <meta name="keywords" content="JHOVE, JOVE, JSTOR, Harvard, object, validation,
+    environment, Java, extensible, format, AIFF, ASCII, GIF, HTML, JPEG, JPEG2000,
+    2000, PDF, TIFF, UTF-8, WAVE, XML, XMP, Adobe, ISO, ANSI, IETF, RFC">
+    <title>JHOVE | UTF8-hul Module</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <!-- Our theme -->
+    <link rel="stylesheet" href="/css/jhove.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+
+Include file 'navbar.html nav=site.data.navbar' contains invalid characters or sequences
+<div class="container" role="main">
+  <h1>UTF8-hul Module</h1>
+  <p>
+    The UTF8-hul module recognizes and validates content streams encoded with the
+    Unicode UTF-8 encoding.
+  </p>
+  <a class="name" name="invocation">
+    <h2>Invocation</h2>
+  </a>
+  <p>
+  The module is invoked by the:
+    <pre>
+      jhove ... -m utf8-hul ...
+    </pre>
+  command line option.
+  </p>
+
+  <a class="name" name="coverage">
+    <h2>Coverage</h2>
+  </a>
+  <p>
+    <ul>
+      <li>
+        UTF-8 encoded content streams
+        [<a href="references.html#unicode">Unicode</a>]
+      </li>
+    </ul>
+  </p>
+  <a class="name" name="well-formedness">
+    <h2>Well-Formedness</h2>
+  </a>
+  <p>
+    The following criteria must be met by an UTF8 content streams
+    for JHOVE to consider it well-formed:
+    <ul>
+      <li>
+        The stream consists of an optional three-octet encoded Byte Order Mark
+        (BOM) character, <tt>0xEFBBBF</tt>, followed by an arbitrary number of
+        the following one- to four-octet sequences:
+        <table>
+          <tr><td>Single octet:</td>
+          <td><tt>0<em>xxxxxxx</em></tt></td></tr>
+          <tr><td>Two octets:</td>
+          <td><tt>110<em>yyyyy</em> 10<em>xxxxxx</em></tt></td></tr>
+          <tr><td>Three octets:</td>
+          <td><tt>1110<em>zzzz</em> 10<em>yyyyyy</em> 10<em>yyyyyy</em></tt><br>
+          <tr><td>Four octets:</td>
+          <td><tt>11110<em>uuu</em> 10<em>uuzzzz</em> 10<em>yyyyyy</em> 10<em>xxxxxx</em></tt></td></tr>
+        </table>
+      </li>
+      <li>
+        The presence of an initial Byte Order Mark (BOM) character in the form of
+        any of the following two- or four-octet sequences automatically taints the
+        content stream as non-well-formed UTF-8:
+        <table>
+          <tr><td rowspan="2">Two octets:</td><td><tt>0xEF&nbsp;0xFF</tt></td>
+          <td>UTF-16 big-endian encoding</td></tr>
+          <tr><td><tt>0xFFFE</tt></td>
+          <td>UTF-16 little-endian encoding</td></tr>
+          <tr><td rowspan="2">Four octets:</td>
+          <td><tt>0x0000FEFF</tt></td>
+          <td>UCS-4 big-endian encoding</td></tr>
+          <tr><td><tt>0xFFFE0000</tt></td>
+          <td>UCS-4 little-endian encoding</td></tr>
+        </table>
+      </li>
+    </ul>
+  </p>
+  <a class="name" name="validity">
+    <h2>Validity</h2>
+  </a>
+  <p>
+    The following criteria must be met by an UTF-8 encoded file for JHOVE to
+    consider it valid:
+    <ul>
+      <li> The UTF-8 encoded file is well-formed</li>
+    </ul>
+  </p>
+  <a class="name" name="repinfo">
+  <h2>Representation Information</h2>
+  </a>
+  <p>
+    The MIME type is reported as: text/plain; charset=UTF-8
+  </p>
+  <p>
+    In addition to the standard JHOVE
+    <a href="index.html#repinfo">representation information</a>, the module
+    defines the following properties:
+    <ul>
+      <li> Line endings: CR, CRLF, or LF</li>
+      <li> Additional control characters</li>
+      <li> Number of characters</li>
+      <li>
+        Unicode 6.0.0 code blocks
+        [<a href="references.html#blocks">Unicode Code Blocks</a>]
+      </li>
+    </ul>
+  </p>
+</div>
+  <footer class="container">
+    <p>
+      Copyright 2015- by the Open Preservation Foundation. Used by permission of
+      JSTOR and the President and Fellows of Harvard College.
+    </p>
+    <p>
+      Updated October 2015
+    </p>
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

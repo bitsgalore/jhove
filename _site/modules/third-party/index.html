@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Main page for JHOVE, the JSTOR/Harvard Object Validation Environment">
+    <meta name="keywords" content="JHOVE, JOVE, JSTOR, Harvard, object, validation,
+    environment, Java, extensible, format, AIFF, ASCII, GIF, HTML, JPEG, JPEG2000,
+    2000, PDF, TIFF, UTF-8, WAVE, XML, XMP, Adobe, ISO, ANSI, IETF, RFC">
+    <title>JHOVE | Using Third-Party Modules</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <!-- Our theme -->
+    <link rel="stylesheet" href="/css/jhove.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+Include file 'navbar.html nav=site.data.navbar' contains invalid characters or sequences
+<div class="container theme-showcase" role="main">
+<h1>Using third-party modules with JHOVE </h1>
+
+<p>
+Adding third-party modules to JHOVE is a simple matter if they
+follow certain requirements. This page describes those
+requirements, and provides links to modules that have been
+written outside HUL.
+<p>
+A third-party module should be packaged as a jar file containing
+only the code for the module (not the classes of JHOVE itself).
+Multiple modules, if related, may be put in the same jar.
+The jar should include source code as well as classes.
+The license terms should be indicated in the source files
+or an accompanying text file.
+Additional jars may be required and should be documented.
+The jar(s) then need only be added to the classpath to be used
+with it.
+<p>
+To avoid confusion with HUL-created code, please do not put
+third-party modules in a package which begins with
+<code>edu.harvard.hul.ois</code>.
+<p>
+Individuals
+or institutions wishing to donate locally-developed modules for
+redistribution to the JHOVE user community should submit a statement of
+their intention to <code>jhove-support at harvard.edu</code>.
+<p>
+See also <a href="/documentation/dev-module/">Writing a Module</a>.
+</p>
+<h3>Third-party modules available for download</h3>
+<p>
+Please note that these modules are <b>unsupported</b> by HUL,
+and that you use them at your own risk.
+</p><ul>
+<li><a href="mp3/">MP3 module</a></li>
+<li><a href="zip/">ZIP and GZIP modules</a></li>
+</ul>
+
+</div>
+      <footer class="container">
+    <p>
+      Copyright 2015- by the Open Preservation Foundation. Used by permission of
+      JSTOR and the President and Fellows of Harvard College.
+    </p>
+    <p>
+      Updated October 2015
+    </p>
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
