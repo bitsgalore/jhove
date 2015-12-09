@@ -1,11 +1,33 @@
----
-title: Getting started
----
 <!DOCTYPE html>
 <html lang="en">
-{% include header.html %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Main page for JHOVE, the JSTOR/Harvard Object Validation Environment">
+    <meta name="keywords" content="JHOVE, JOVE, JSTOR, Harvard, object, validation,
+    environment, Java, extensible, format, AIFF, ASCII, GIF, HTML, JPEG, JPEG2000,
+    2000, PDF, TIFF, UTF-8, WAVE, XML, XMP, Adobe, ISO, ANSI, IETF, RFC">
+    <title>JHOVE | Getting started</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <!-- Our theme -->
+    <link rel="stylesheet" href="/css/jhove.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
 <body role="document">
-{% include navbar.html nav=site.data.navbar %}
+Include file 'navbar.html nav=site.data.navbar' contains invalid characters or sequences
 <div class="container theme-showcase" role="main">
   <h1>Getting Started with JHOVE</h1>
 
@@ -231,7 +253,7 @@ title: Getting started
   <h3>Usage</h3>
   <p>
     <pre>
-      jhove [-c config] [-m module] [-h handler] [-e encoding] [-H handler]
+      java Jhove [-c config] [-m module] [-h handler] [-e encoding] [-H handler]
                   [-o output] [-x saxclass] [-t tempdir] [-b bufsize]
                   [-l loglevel] [[-krs] dir-file-or-uri [...]]
 
@@ -425,7 +447,7 @@ GUI interface is invoked from a command shell:
 </p>
 
 <pre>
-jhove-gui
+java -jar bin/JhoveView.jar
 </pre>
 
 or by the appropriate mouse click behavior defined by the windowing system.
@@ -1138,6 +1160,20 @@ for the recently launched
 
 
 </div>
-    {% include footer.html %}
+      <footer class="container">
+    <p>
+      Copyright 2015- by the Open Preservation Foundation. Used by permission of
+      JSTOR and the President and Fellows of Harvard College.
+    </p>
+    <p>
+      Updated October 2015
+    </p>
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
